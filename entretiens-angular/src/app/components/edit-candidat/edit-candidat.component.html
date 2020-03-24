@@ -1,0 +1,52 @@
+<div class="container">
+  <ol class="breadcrumb mt-2">
+    <li class="breadcrumb-item active">Mise à jour des candidats</li>
+</ol>
+<div class="col-8 offset-2">
+<div class="card">
+  <div class="card-header bg-primary text-white">
+    Modifier un candidat
+  </div>
+    <div class="card-body" *ngIf="currentCandidat">
+        <form #f="ngForm" (ngSubmit)="onUpdateCandidat(f.value)">
+				    <div class="form-group">
+			  <div class="row">
+       <div class="col">
+		Nom :<input type="text" class="form-control" name="nom" ngModel [(ngModel)]="currentCandidat.nom">
+         </div>
+         <div class="col">
+		Prénom :<input type="text" class="form-control" name="prenom" ngModel [(ngModel)]="currentCandidat.prenom">
+         </div>
+        </div>
+		</div>
+	    <div class="form-group">
+			Tél :<input type="text" class="form-control" name="telephone"  ngModel [(ngModel)]="currentCandidat.telephone">
+		</div>
+		<div class="form-group">
+		   Ville :<input type="text" class="form-control" name="ville" ngModel [(ngModel)]="currentCandidat.ville">
+		</div>
+		<div class="form-group">
+			Age :<input type="number" class="form-control" name="age" ngModel [(ngModel)]="currentCandidat.age">
+		</div>
+	    <div class="form-group">
+			Disponibilite :<input type="text" class="form-control" name="disponibilite" ngModel [(ngModel)]="currentCandidat.disponibilite">
+		</div>
+		<div class="form-group">
+		Expérience :<input type="text" class="form-control" name="experience" ngModel [(ngModel)]="currentCandidat.experience">
+		</div>
+		<div class="form-group">
+		Salaire <input type="text" class="form-control" name="salaire" ngModel [(ngModel)]="currentCandidat.salaire">
+		</div>
+		<div class="form-group">
+		Métier <input type="text" class="form-control" name="salaire" ngModel [(ngModel)]="currentCandidat.salaire">
+		</div>
+		<div class="form-group">
+		Compétence <input type="text" class="form-control" name="salaire" ngModel [(ngModel)]="currentCandidat.salaire">
+		</div>
+
+		<button type="submit" class="btn btn-success">Sauvegarder</button>
+		</form>
+  </div>
+  </div>
+</div>
+</div>
